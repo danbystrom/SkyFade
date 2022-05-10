@@ -36,7 +36,9 @@ public class SkyFade : MonoBehaviour
         _skyboxCamera.CopyFrom(myCamera);
         _skyboxCamera.cullingMask = 0;
         _skyboxCamera.enabled = false;
+
         myCamera.clearFlags = CameraClearFlags.Depth;
+        myCamera.depthTextureMode = DepthTextureMode.Depth;
 
         createRenderTexture();
 
